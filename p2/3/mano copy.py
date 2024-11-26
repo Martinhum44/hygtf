@@ -45,7 +45,8 @@ while True:
     print(results.multi_hand_landmarks)
     H_landmarks = results.multi_hand_landmarks
     print(image, H_landmarks)
-    drawHandLandmarks(image, H_landmarks)
+    if H_landmarks is not None:
+        drawHandLandmarks(image, H_landmarks)
 
     if not success:
         print("OH NO D:")
